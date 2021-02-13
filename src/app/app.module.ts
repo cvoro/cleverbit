@@ -28,8 +28,7 @@ import { AppRoutingModule } from './appRouting.module';
     FormsModule,
     StoreModule.forRoot(reducers, {
       metaReducers
-    }),
-    StoreDevtoolsModule.instrument({ maxAge: 25 }),
+    })
   ],
   providers: [],
   bootstrap: [AppComponent]
