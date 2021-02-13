@@ -1,0 +1,15 @@
+<div class="card">
+  <div class="card-header">
+    {{post.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{post.description}}</h5>  <button (click)="likePost()"> Like  {{post.likes}}</button>
+    <div class="form-group">
+      <textarea class="form-control" placeholder="Add your comment here" id="exampleFormControlTextarea1" (keydown.enter)="addNewComment($event)" [(ngModel)]="comment" rows="3"></textarea>
+    </div>
+
+    <br >
+    <p class="card-text"  *ngFor="let comment of post.comments">{{comment.description}} {{comment.dateCreated | date: 'MM/dd/yyyy'}}</p>
+  </div>
+</div>
+<br>

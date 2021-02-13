@@ -1,0 +1,8 @@
+<div *ngFor="let comment of comments$ | async" class="card">
+  <div class="card-header">
+    {{comment.title}}
+  </div>
+  <div class="card-body">
+    <h5 class="card-title">{{comment.description}}</h5>  
+</div>
+<br>
